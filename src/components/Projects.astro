@@ -52,6 +52,16 @@ import { projects } from "../data/projects";
 											Lihat project →
 										</a>
 									)}
+									{p.site && (
+										<a
+											href={p.site}
+											target="_blank"
+											rel="noopener"
+											aria-label={`Lihat website ${p.title}`}
+											class="mt-4 ml-3 inline-block text-sm font-medium underline underline-offset-4 hover:no-underline"
+											>Lihat website →</a
+										>
+									)}
 								</div>
 							</article>
 						</AnimatedWrapper>

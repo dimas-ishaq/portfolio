@@ -7,6 +7,7 @@ export interface Project {
 	role?: string;
 	features?: string[];
 	link?: string;
+	site?: string;
 	image?: string;
 }
 
@@ -39,6 +40,7 @@ export const projects: Project[] = [
 		desc: "Implementasi dan pengelolaan Moodle untuk pembelajaran, asesmen, manajemen pengguna, dan koordinasi aktivitas akademik.",
 		features: ["Instalasi dan konfigurasi", "Manajemen user dan role", "Administrasi course dan kuis", "Pelatihan guru dan troubleshooting"],
 		tags: ["Moodle", "PHP", "MySQL", "Linux"],
+		site: "https://lms.smkpluspenus.my.id",
 	},
 	{
 		id: "talentsync",
