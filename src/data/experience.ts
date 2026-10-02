@@ -31,13 +31,13 @@ export const experiences: Experience[] = [
 	},
 	{
 		id: "application-support",
-		role: "Application Support",
+		role: "Application Development and Support",
 		org: "Sistem Pendidikan",
 		period: "Saat ini",
 		bullets: [
-			"Deployment dan maintenance sistem aplikasi.",
-			"Troubleshooting, dukungan pengguna, dan monitoring database.",
-			"Mendukung aplikasi PPDB dan sistem ujian sekolah/TKA.",
+			"Mengidentifikasi kebutuhan pengguna dan mengembangkan fitur aplikasi.",
+			"Menyiapkan deployment dan konfigurasi sistem pendidikan.",
+			"Menangani kendala teknis, maintenance, dan dokumentasi sistem.",
 		],
 	},
 ];

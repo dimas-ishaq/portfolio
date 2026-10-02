@@ -15,14 +15,20 @@ export const certifications: Certification[] = [
 	},
 	{
 		id: "google-cloud",
-		title: "Google Cloud",
-		issuer: "Google Cloud",
-		desc: "Cloud Computing Fundamentals, Infrastructure, Networking",
+		title: "Menjadi Google Cloud Engineer",
+		issuer: "Dicoding / Google Cloud",
+		desc: "Course completion — Cloud Computing Fundamentals, Infrastructure, Networking; credential period ended 3 May 2026.",
 	},
 	{
-		id: "dicoding-bundle",
-		title: "59+ Sertifikat Dicoding",
+		id: "dicoding-fe-expert",
+		title: "Menjadi Front-End Web Developer Expert",
 		issuer: "Dicoding",
-		desc: "Backend dengan Google Cloud, JavaScript, Git & GitHub, React Developer, Front-End Developer",
+		desc: "Completed 23 May 2024 · valid until 23 May 2027 — mobile-first, accessibility, clean code, PWA, testing, performance, CI/CD.",
+	},
+	{
+		id: "dicoding-more",
+		title: "More Dicoding courses",
+		issuer: "Dicoding",
+		desc: "Additional learning — verify via public Dicoding profile.",
 	},
 ];

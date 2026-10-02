@@ -10,7 +10,7 @@ export interface Stat {
 
 export const profile = {
 	name: "Dimas Maulana Ishaq",
-	role: "Application Support Engineer | Moodle LMS Administrator",
+	role: "Application Support | Software Developer | Moodle LMS Administrator | IT Educator",
 	tagline:
 		"Membangun, mengelola, dan mendukung sistem informasi pendidikan, LMS Moodle, aplikasi berbasis web, serta infrastruktur pembelajaran digital untuk meningkatkan efisiensi operasional dan pengalaman pengguna.",
 	email: "dimasmaulanaishaq01@gmail.com",
@@ -24,12 +24,13 @@ export const profile = {
 		"Technical Trainer",
 	],
 	links: [] as SocialLink[],
-	stats: [
-		{ value: "59+", label: "Sertifikat Dicoding" },
-		{ value: "1000+", label: "Akun Moodle dikelola" },
-		{ value: "5+", label: "Tahun layanan pengguna" },
-		{ value: "10+", label: "Proyek sistem pendidikan" },
-	] satisfies Stat[],
+	highlights: [
+		"Moodle User and Course Administration",
+		"School Assessment System Support",
+		"Application Development and Deployment",
+		"Technology Training for Educators",
+	],
+	stats: [] satisfies Stat[],
 	subjectsTaught: [
 		"Pemrograman Dasar",
 		"Basis Data",

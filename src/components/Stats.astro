@@ -4,18 +4,18 @@ import { profile } from "../data/profile";
 ---
 
 {
-	profile.stats.length > 0 && (
-		<section id="stats" class="border-y border-zinc-200 dark:border-zinc-800" aria-label="Statistik profesional">
-			<dl class="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-6 py-12 lg:grid-cols-4">
-				{profile.stats.map((stat, i) => (
+	profile.highlights.length > 0 && (
+		<section id="highlights" class="border-y border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900/40" aria-label="Sorotan profesional">
+			<ul class="mx-auto grid max-w-6xl grid-cols-1 gap-4 px-6 py-12 sm:grid-cols-2 lg:grid-cols-4">
+				{profile.highlights.map((item, i) => (
 					<AnimatedWrapper delay={(i % 4) * 80}>
-						<div class="text-center lg:text-left">
-							<dt class="order-2 mt-1 block text-sm text-zinc-500">{stat.label}</dt>
-							<dd class="text-3xl font-bold tracking-tight">{stat.value}</dd>
-						</div>
+						<li class="flex h-full items-start gap-3 text-sm font-medium leading-relaxed">
+							<span class="mt-0.5 text-zinc-400" aria-hidden="true">—</span>
+							{item}
+						</li>
 					</AnimatedWrapper>
 				))}
-			</dl>
+			</ul>
 		</section>
 	)
 }

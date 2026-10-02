@@ -6,11 +6,11 @@ export interface SkillGroup {
 export const skillGroups: SkillGroup[] = [
 	{
 		category: "Application Support",
-		items: ["User Support", "Incident Management", "Troubleshooting", "Ticket Handling", "Deployment Aplikasi", "Monitoring Sistem"],
+		items: ["Application Deployment", "System Configuration", "User Administration", "Troubleshooting", "Incident Documentation", "Maintenance", "User Training"],
 	},
 	{
 		category: "Database",
-		items: ["MySQL", "MariaDB", "PostgreSQL", "SQL Query", "Database Design", "Backup & Recovery"],
+		items: ["MySQL", "MariaDB", "SQL Query", "Database Design"],
 	},
 	{
 		category: "LMS & E-Learning",
@@ -18,7 +18,7 @@ export const skillGroups: SkillGroup[] = [
 	},
 	{
 		category: "Web Development",
-		items: ["PHP", "Laravel", "JavaScript", "ReactJS", "NodeJS", "REST API"],
+		items: ["PHP", "Laravel", "JavaScript", "TypeScript", "React", "Node.js", "REST API", "HTML & CSS"],
 	},
 	{
 		category: "Cloud & Infrastructure",
