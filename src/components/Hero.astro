@@ -21,25 +21,29 @@ const {
 	class="mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-center px-6 pb-16 pt-24 sm:min-h-[78vh] sm:pt-32"
 	aria-labelledby="hero-title"
 >
-	<AnimatedWrapper delay={0}>
-		<div class="flex items-center gap-5">
+	<div class="grid items-center gap-10 lg:grid-cols-[1fr_280px]">
+		<div>
+			<AnimatedWrapper delay={0}>
+				<p class="text-sm font-medium uppercase tracking-widest text-zinc-500">{role}</p>
+			</AnimatedWrapper>
+			<AnimatedWrapper delay={80}>
+				<h1 id="hero-title" class="mt-4 text-4xl font-bold tracking-tight sm:text-6xl">{name}</h1>
+			</AnimatedWrapper>
+			<AnimatedWrapper delay={160}>
+				<p class="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">{tagline}</p>
+			</AnimatedWrapper>
+		</div>
+		<AnimatedWrapper delay={120} class="mx-auto w-full max-w-[240px] lg:max-w-none">
 			<img
 				src="/profile.png"
 				alt="Foto profil Dimas Maulana Ishaq"
-				width="96"
-				height="96"
-				class="h-20 w-20 rounded-full border border-zinc-200 object-cover sm:h-24 sm:w-24 dark:border-zinc-800"
+				width="1086"
+				height="1448"
+				class="aspect-[3/4] w-full rounded-2xl border border-zinc-200 object-cover object-top shadow-lg dark:border-zinc-800"
 				fetchpriority="high"
 			/>
-			<p class="text-sm font-medium uppercase tracking-widest text-zinc-500">{role}</p>
-		</div>
-	</AnimatedWrapper>
-	<AnimatedWrapper delay={80}>
-		<h1 id="hero-title" class="mt-4 text-4xl font-bold tracking-tight sm:text-6xl">{name}</h1>
-	</AnimatedWrapper>
-	<AnimatedWrapper delay={160}>
-		<p class="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">{tagline}</p>
-	</AnimatedWrapper>
+		</AnimatedWrapper>
+	</div>
 	<AnimatedWrapper delay={240}>
 		<div class="mt-8 flex flex-wrap gap-3">
 			<a
