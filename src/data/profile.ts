@@ -13,7 +13,7 @@ export const profile = {
 	role: "Application Support Engineer | Moodle LMS Administrator",
 	tagline:
 		"Membangun, mengelola, dan mendukung sistem informasi pendidikan, LMS Moodle, aplikasi berbasis web, serta infrastruktur pembelajaran digital untuk meningkatkan efisiensi operasional dan pengalaman pengguna.",
-	email: "dimas@example.com",
+	email: "dimasmaulanaishaq01@gmail.com",
 	location: "Indonesia",
 	openTo: [
 		"Application Support",
