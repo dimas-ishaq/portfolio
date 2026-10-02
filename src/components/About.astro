@@ -1,19 +1,35 @@
 ---
 import Section from "./ui/Section.astro";
 import AnimatedWrapper from "./ui/AnimatedWrapper.astro";
+import { profile } from "../data/profile";
 ---
 
 <Section id="about" title="About" subtitle="Sekilas tentang saya.">
 	<AnimatedWrapper>
-		<div class="prose max-w-2xl dark:prose-invert">
+		<div class="max-w-2xl">
 			<p class="text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
-				Saya developer yang fokus pada web cepat dan ringan. Saya suka mengubah ide jadi
-				antarmuka yang halus, aksesibel, dan gampang dipakai.
+				Lulusan Teknik Informatika dengan pengalaman pada pengembangan aplikasi, pengelolaan
+				Learning Management System (Moodle), administrasi basis data, implementasi sistem ujian
+				berbasis komputer, serta dukungan teknis aplikasi.
 			</p>
 			<p class="mt-4 text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
-				Stack utama saya: TypeScript, Astro, Tailwind — dengan animasi secukupnya yang tidak
-				mengorbankan performa.
+				Selain pengembangan perangkat lunak, saya aktif sebagai guru produktif Rekayasa Perangkat
+				Lunak.
 			</p>
 		</div>
 	</AnimatedWrapper>
+	{
+		profile.subjectsTaught.length > 0 && (
+			<AnimatedWrapper delay={80}>
+				<div class="mt-10 max-w-2xl">
+					<h3 class="text-sm font-semibold uppercase tracking-widest text-zinc-500">Mata pelajaran yang diajarkan</h3>
+					<ul class="mt-4 flex flex-wrap gap-2">
+						{profile.subjectsTaught.map((subject) => (
+							<li class="rounded-full border border-zinc-200 px-3 py-1 text-sm dark:border-zinc-800">{subject}</li>
+						))}
+					</ul>
+				</div>
+			</AnimatedWrapper>
+		)
+	}
 </Section>

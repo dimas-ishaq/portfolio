@@ -8,17 +8,36 @@ export interface Experience {
 
 export const experiences: Experience[] = [
 	{
-		id: "exp-1",
-		role: "Frontend Developer",
-		org: "Example Co",
-		period: "2024 — Present",
-		bullets: ["Built fast static sites with Astro and Tailwind.", "Shipped motion that respects prefers-reduced-motion."],
+		id: "guru-pplg",
+		role: "Guru PPLG / IT Educator",
+		org: "SMK Plus Pelita Nusantara",
+		period: "Saat ini",
+		bullets: [
+			"Mengajar software development, basis data, OOP, mobile, serta koding dan AI.",
+			"Menyusun modul Kurikulum Merdeka dan media pembelajaran digital.",
+			"Mengintegrasikan AI dalam pembelajaran praktik.",
+		],
 	},
 	{
-		id: "exp-2",
-		role: "Junior Developer",
-		org: "Another Studio",
-		period: "2023 — 2024",
-		bullets: ["Worked across design and frontend.", "Learned to keep bundles small."],
+		id: "moodle-admin",
+		role: "Moodle Administrator",
+		org: "SMK Plus Pelita Nusantara",
+		period: "Saat ini",
+		bullets: [
+			"Instalasi, konfigurasi, deployment, dan maintenance Moodle.",
+			"Mengelola user, course, quiz, serta mendukung ujian online.",
+			"Memberikan pelatihan dan dukungan kepada guru pengguna LMS.",
+		],
+	},
+	{
+		id: "application-support",
+		role: "Application Support",
+		org: "Sistem Pendidikan",
+		period: "Saat ini",
+		bullets: [
+			"Deployment dan maintenance sistem aplikasi.",
+			"Troubleshooting, dukungan pengguna, dan monitoring database.",
+			"Mendukung aplikasi PPDB dan sistem ujian sekolah/TKA.",
+		],
 	},
 ];

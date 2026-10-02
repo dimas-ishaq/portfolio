@@ -1,5 +1,6 @@
 ---
 import AnimatedWrapper from "./ui/AnimatedWrapper.astro";
+import { profile } from "../data/profile";
 
 interface Props {
 	name?: string;
@@ -8,10 +9,10 @@ interface Props {
 	email?: string;
 }
 const {
-	name = "Nama Kamu",
-	role = "Frontend Developer",
-	tagline = "Membangun web ringan, cepat, dan penuh karakter — dengan animasi yang halus.",
-	email = "hello@example.com",
+	name = profile.name,
+	role = profile.role,
+	tagline = profile.tagline,
+	email = profile.email,
 } = Astro.props;
 ---
 
@@ -37,9 +38,14 @@ const {
 				>Lihat projects</a
 			>
 			<a
-				href={`mailto:${email}`}
+				href="#contact"
 				class="rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium transition hover:bg-zinc-50 dark:border-zinc-700 dark:hover:bg-zinc-900"
-				>Kontak</a
+				>Hubungi saya</a
+			>
+			<a
+				href={`mailto:${email}`}
+				class="rounded-full px-4 py-3 text-sm font-medium underline underline-offset-4 hover:no-underline"
+				>Email</a
 			>
 		</div>
 	</AnimatedWrapper>

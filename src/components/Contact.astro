@@ -1,16 +1,20 @@
 ---
 import Section from "./ui/Section.astro";
 import AnimatedWrapper from "./ui/AnimatedWrapper.astro";
+import { profile } from "../data/profile";
 
 interface Props {
-	email: string;
+	email?: string;
 }
-const { email } = Astro.props;
+const { email = profile.email } = Astro.props;
 ---
 
 <Section id="contact" title="Contact" subtitle="Punya ide atau project? Mari ngobrol.">
 	<AnimatedWrapper>
-		<div class="flex flex-wrap items-center gap-4">
+		<p class="max-w-2xl text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+			Terbuka untuk peluang sebagai {profile.openTo.join(" · ")}.
+		</p>
+		<div class="mt-6 flex flex-wrap items-center gap-4">
 			<a
 				href={`mailto:${email}`}
 				class="rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-zinc-700 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200"
@@ -18,5 +22,21 @@ const { email } = Astro.props;
 			>
 			<span class="text-sm text-zinc-500">{email}</span>
 		</div>
+		{profile.links.length > 0 && (
+			<ul class="mt-6 flex flex-wrap gap-3">
+				{profile.links.map((link) => (
+					<li>
+						<a
+							href={link.href}
+							target="_blank"
+							rel="noopener"
+							class="rounded-full border border-zinc-200 px-5 py-2 text-sm dark:border-zinc-800"
+						>
+							{link.label}
+						</a>
+					</li>
+				))}
+			</ul>
+		)}
 	</AnimatedWrapper>
 </Section>

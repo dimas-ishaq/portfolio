@@ -1,0 +1,23 @@
+---
+import Section from "./ui/Section.astro";
+import AnimatedWrapper from "./ui/AnimatedWrapper.astro";
+import { certifications } from "../data/certifications";
+---
+
+{certifications.length > 0 && (
+	<Section id="certifications" title="Certifications" subtitle="Pembelajaran yang mendukung praktik sehari-hari.">
+		<ul class="grid grid-cols-1 gap-4 md:grid-cols-3">
+			{certifications.map((cert, i) => (
+				<li>
+					<AnimatedWrapper delay={(i % 3) * 80}>
+						<article class="h-full rounded-2xl border border-zinc-200 p-5 dark:border-zinc-800">
+							<p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">{cert.issuer}</p>
+							<h3 class="mt-3 text-lg font-semibold">{cert.title}</h3>
+							{cert.desc && <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{cert.desc}</p>}
+						</article>
+					</AnimatedWrapper>
+				</li>
+			))}
+		</ul>
+	</Section>
+)}
