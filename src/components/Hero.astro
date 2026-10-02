@@ -1,0 +1,46 @@
+---
+import AnimatedWrapper from "./ui/AnimatedWrapper.astro";
+
+interface Props {
+	name?: string;
+	role?: string;
+	tagline?: string;
+	email?: string;
+}
+const {
+	name = "Nama Kamu",
+	role = "Frontend Developer",
+	tagline = "Membangun web ringan, cepat, dan penuh karakter — dengan animasi yang halus.",
+	email = "hello@example.com",
+} = Astro.props;
+---
+
+<section
+	id="hero"
+	class="mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-center px-6 pb-16 pt-24 sm:min-h-[78vh] sm:pt-32"
+	aria-labelledby="hero-title"
+>
+	<AnimatedWrapper delay={0}>
+		<p class="text-sm font-medium uppercase tracking-widest text-zinc-500">{role}</p>
+	</AnimatedWrapper>
+	<AnimatedWrapper delay={80}>
+		<h1 id="hero-title" class="mt-4 text-4xl font-bold tracking-tight sm:text-6xl">{name}</h1>
+	</AnimatedWrapper>
+	<AnimatedWrapper delay={160}>
+		<p class="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">{tagline}</p>
+	</AnimatedWrapper>
+	<AnimatedWrapper delay={240}>
+		<div class="mt-8 flex flex-wrap gap-3">
+			<a
+				href="#projects"
+				class="rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-zinc-700 focus-visible:outline-zinc-900 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200"
+				>Lihat projects</a
+			>
+			<a
+				href={`mailto:${email}`}
+				class="rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium transition hover:bg-zinc-50 dark:border-zinc-700 dark:hover:bg-zinc-900"
+				>Kontak</a
+			>
+		</div>
+	</AnimatedWrapper>
+</section>
