@@ -23,7 +23,7 @@ export const profile = {
 		"System Administrator",
 		"Technical Trainer",
 	],
-	links: [] as SocialLink[],
+	links: [{ label: "GitHub", href: "https://github.com/dimas-ishaq" }] as SocialLink[],
 	highlights: [
 		"Moodle User and Course Administration",
 		"School Assessment System Support",
