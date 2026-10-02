@@ -28,8 +28,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin).to
 	<body class="bg-white text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100">
 		<slot />
 		<footer class="border-t border-zinc-200 py-6 dark:border-zinc-800">
-			<div class="mx-auto max-w-6xl px-6 text-sm text-zinc-500">
-				© {new Date().getFullYear()} Portfolio
+			<div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-6 text-sm text-zinc-500">
+				<p>&copy; {new Date().getFullYear()} Portfolio</p>
+				<ul class="flex gap-4">
+					<li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+					<li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+				</ul>
 			</div>
 		</footer>
 	</body>
